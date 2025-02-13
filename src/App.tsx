@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react"; // Removed unused React import
 import Confetti from "react-confetti";
 import "./App.css";
 
 function App() {
-  const [response, setResponse] = useState(null);
+  const [response, setResponse] = useState<string | null>(null); // Allow string or null
   const [showConfetti, setShowConfetti] = useState(false);
 
   const handleYes = () => {
-    setResponse("Yay! Val for life! ❤️");
+    setResponse("Yay! Val for life! ❤️"); // Now works because response can be a string
     setShowConfetti(true);
   };
 
   const handleNo = () => {
-    setResponse("Aww, maybe next time? 💔");
+    setResponse("Aww, maybe next time? 💔"); // Now works because response can be a string
     setShowConfetti(false);
   };
 
