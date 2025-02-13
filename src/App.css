@@ -1,0 +1,185 @@
+.valentine-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffebee;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #d32f2f;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Remove the float animation */
+}
+
+.yes-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.yes-button:hover {
+  background-color: #388e3c;
+}
+
+.no-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.no-button:hover {
+  background-color: #d32f2f;
+}
+
+.response {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #d32f2f;
+}
+/* Add this to your existing App.css */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.valentine-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffebee;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #d32f2f;
+  margin-bottom: 2rem;
+  animation: heartbeat 1.5s infinite;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+    /* Remove the float animation */
+}
+
+.yes-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.yes-button:hover {
+  background-color: #388e3c;
+}
+
+.no-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.no-button:hover {
+  background-color: #d32f2f;
+}
+
+.response {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #d32f2f;
+  animation: float 2s ease-in-out infinite;
+}
+
+.hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.heart {
+  position: absolute;
+  font-size: 2rem;
+  color: #d32f2f;
+  animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) translateX(-10vw);
+  }
+  100% {
+    transform: translateY(-10vh) translateX(10vw);
+  }
+}
+.response-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.video-container {
+  margin-top: 2rem;
+}
+
+iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+}
